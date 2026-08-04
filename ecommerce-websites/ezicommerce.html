@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ezicommerce — E-commerce Management Services, business setup, web development, SEO, graphic design, social media and digital growth solutions.">
+<meta name="theme-color" content="#f05a1a">
+<title>Ezicommerce | E-commerce Management Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--o:#f05a1a;--o2:#ff702b;--b:#07090c;--c:#11151a;--s:#1c232b;--g:#8c97a4;--l:#dce1e6;--w:#fff;--line:#ffffff14;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px}body{background:var(--b);color:var(--l);font:16px/1.65 Cabin,sans-serif}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.container{width:min(var(--max),92%);margin:auto}.section{padding:90px 0}h1,h2,h3,h4,.logo{font-family:Anton,sans-serif;text-transform:uppercase;line-height:1.05}h2{font-size:clamp(2.4rem,5vw,4.5rem);color:#fff}p{color:var(--g)}.orange{color:var(--o)}.kicker{color:var(--o);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.kicker:before{content:"";display:inline-block;width:28px;height:2px;background:var(--o);margin:0 10px 3px 0}
+header{position:sticky;top:0;z-index:10;background:#07090ceF;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:1.8rem;color:#fff;letter-spacing:.04em}.logo span{color:var(--o)}.logo small{display:block;font:700 .54rem Cabin;letter-spacing:.16em;color:var(--g)}.navlinks{display:flex;gap:24px;align-items:center;font-weight:700;font-size:.9rem}.navlinks a:hover{color:var(--o)}.navbtn{background:var(--o);padding:10px 17px;border-radius:4px;color:#fff}.menu{display:none;background:none;border:0;color:#fff;font-size:1.5rem}
+.hero{min-height:calc(100vh - 78px);display:flex;align-items:center;background:radial-gradient(circle at 80% 35%,#f05a1a20,transparent 28%),linear-gradient(135deg,#07090c,#11151a 65%,#080a0d)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center;padding:80px 0}.hero h1{font-size:clamp(3.5rem,8vw,7.4rem)}.hero h1 em{font-style:normal;color:var(--o)}.hero-copy{font-size:1.12rem;max-width:680px;margin-top:24px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 21px;border-radius:4px;border:1px solid #46505b;font-weight:800;transition:.2s}.primary{background:var(--o);border-color:var(--o);color:#fff}.primary:hover{background:var(--o2)}.outline:hover{border-color:var(--o);color:var(--o)}.stats{display:flex;gap:30px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line)}.stats strong{display:block;font:1.8rem Anton;color:#fff}.stats span{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--g)}.hero-card{background:#181e25;border:1px solid var(--line);padding:30px}.hero-card .tag{color:var(--o);font-weight:800;font-size:.75rem;letter-spacing:.13em;text-transform:uppercase}.hero-card h3{font-size:2.2rem;margin:12px 0 22px}.hero-list{list-style:none}.hero-list li{padding:15px 0;border-top:1px solid var(--line);font-weight:700}.hero-list b{color:var(--o);margin-right:12px}
+.strip{border-block:1px solid var(--line);background:#0d1014}.stripin{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:18px 0}.strip span{color:#78838f;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.about{background:#0c0f13}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.aboutbox{background:var(--c);border:1px solid var(--line);padding:32px}.big{font:6rem Anton;color:var(--o);line-height:.9}.aboutbox h3{font-size:1.8rem;margin:12px 0}.aboutcopy p{margin:15px 0}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px;font-weight:700}.checks span{color:var(--o);margin-right:7px}
+.head{max-width:760px;margin-bottom:40px}.head p{margin-top:15px;font-size:1.05rem}.services{background:#080a0d}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service{background:var(--c);border:1px solid var(--line);padding:27px;min-height:225px;transition:.2s}.service:hover{transform:translateY(-4px);border-color:#f05a1a80}.ico{width:50px;height:50px;color:var(--o);background:#f05a1a14;border:1px solid #f05a1a30;border-radius:12px;display:grid;place-items:center}.ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.service h3{font-size:1.3rem;margin:18px 0 9px}.service p{font-size:.9rem}.price{display:block;color:var(--o);font-size:.82rem;font-weight:800;margin-top:14px}
+.plans{background:#11161c}.plans .grid3{align-items:stretch}.plan{background:#181e25;border:1px solid var(--line);padding:30px;position:relative}.plan.featured{border-color:var(--o)}.badge{position:absolute;right:15px;top:15px;background:var(--o);font-size:.63rem;padding:5px 8px;font-weight:800}.plan h3{font-size:1.7rem}.amount{font:3.2rem Anton;color:#fff;margin:15px 0 0}.amount small{font:700 .75rem Cabin;color:var(--g)}.plan ul{list-style:none;margin:20px 0;display:grid;gap:9px}.plan li{font-size:.9rem;color:#b8c0c8}.plan li:before{content:"✓";color:var(--o);font-weight:900;margin-right:8px}.plan .btn{width:100%}
+.process{background:var(--c)}.processgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.step{background:var(--c);padding:27px}.step b{font:2.6rem Anton;color:var(--o)}.step h3{font-size:1.15rem;margin:8px 0}.step p{font-size:.88rem}
+.cta{background:var(--o)}.ctain{display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{max-width:760px}.cta p{color:#fffB;margin-top:10px}.cta .btn{background:#07090c;border-color:#07090c;color:#fff}
+.contact{background:#080a0d}.contactgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px}.contact h2{margin-top:10px}.contactitems{display:grid;gap:10px;margin-top:27px}.contactitem{display:flex;gap:14px;padding:16px;background:var(--c);border:1px solid var(--line)}.contactitem strong{display:block;color:#fff}.contactitem span{font-size:.82rem;color:var(--g)}.form{background:var(--c);border:1px solid var(--line);padding:32px}.form h3{font-size:2rem}.form>p{margin-top:5px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.full{grid-column:1/-1}label{display:block;color:#cbd1d7;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}input,select,textarea{width:100%;background:#0d1014;color:#fff;border:1px solid #343c45;border-radius:4px;padding:12px;outline:0}input:focus,select:focus,textarea:focus{border-color:var(--o)}textarea{min-height:125px;resize:vertical}.form button{width:100%;border:0;background:var(--o);color:#fff;font-weight:800;padding:14px;border-radius:4px;margin-top:15px;cursor:pointer}.note{text-align:center;font-size:.72rem;color:#727d89;margin-top:8px}
+footer{background:#050608;border-top:1px solid var(--line);padding:25px 0}.footer{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer .logo{font-size:1.35rem}.footer p{font-size:.75rem}.footer a{color:var(--o);font-weight:700}
+@media(max-width:950px){.navlinks{display:none;position:absolute;left:0;right:0;top:78px;background:#07090c;padding:18px 4%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navlinks a{padding:7px 0}.menu{display:block}.hero-grid,.about-grid,.contactgrid{grid-template-columns:1fr}.hero-grid{padding:65px 0}.grid3{grid-template-columns:1fr 1fr}.processgrid{grid-template-columns:1fr 1fr}.ctain{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.section{padding:65px 0}.nav{height:68px}.navlinks{top:68px}.hero h1{font-size:3.6rem}.stats{justify-content:space-between;gap:12px}.stats strong{font-size:1.45rem}.stats span{font-size:.6rem}.grid3,.processgrid,.fields,.checks{grid-template-columns:1fr}.full{grid-column:auto}.form{padding:23px}.footer{flex-direction:column;text-align:center}.stripin{justify-content:center}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+<symbol id="cart" viewBox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></symbol>
+<symbol id="web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="M3 8h18M8 21h8M12 19v2"/></symbol>
+<symbol id="search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+<symbol id="design" viewBox="0 0 24 24"><path d="m4 20 4.2-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L4 20Z"/><path d="m14.5 6.5 3 3"/></symbol>
+<symbol id="social" viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="6" r="2.5"/><circle cx="17" cy="18" r="3"/><path d="m10.7 8 4-1M10.5 10.5l4 5"/></symbol>
+<symbol id="map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+</svg>
+
+<header><div class="container nav">
+<a class="logo" href="#home">EZI<span>COMMERCE</span><small>E-COMMERCE MANAGEMENT SERVICES</small></a>
+<button class="menu" aria-label="Menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+<nav class="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#plans">Plans</a><a href="#process">How It Works</a><a href="#contact" class="navbtn">Get Started</a></nav>
+</div></header>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+<div><span class="kicker">E-commerce • Business • Marketing</span><h1>Build it.<br><em>Grow it.</em><br>Sell more.</h1>
+<p class="hero-copy">Ezicommerce is a sales-management team providing e-commerce solutions, business setup, business development and marketing services — helping businesses look professional, get discovered and convert more customers.</p>
+<div class="actions"><a class="btn primary" href="#contact">Start Your Project →</a><a class="btn outline" href="#plans">View Plans</a></div>
+<div class="stats"><div><strong>WEB</strong><span>Development</span></div><div><strong>SEO</strong><span>Visibility</span></div><div><strong>SOCIAL</strong><span>Growth</span></div><div><strong>SETUP</strong><span>Business</span></div></div></div>
+<div class="hero-card"><span class="tag">One team. Multiple growth levers.</span><h3>Everything you need to compete online.</h3><ul class="hero-list"><li><b>01</b>E-commerce & Web Solutions</li><li><b>02</b>Search & Local Visibility</li><li><b>03</b>Social Media Marketing</li><li><b>04</b>Business Setup & Development</li><li><b>05</b>Creative & Graphic Design</li></ul></div>
+</div></section>
+
+<div class="strip"><div class="container stripin"><span>Web Development</span><span>SEO</span><span>Graphic Design</span><span>Social Media</span><span>Google Business</span><span>Video Marketing</span></div></div>
+
+<section class="section about" id="about"><div class="container about-grid">
+<div class="aboutbox"><div class="big">EZI</div><h3>Commerce made simpler.</h3><p>Solutions for businesses that want a stronger digital presence and a more professional customer journey.</p></div>
+<div class="aboutcopy"><span class="kicker">Why Ezicommerce</span><h2>We manage the digital work behind your growth.</h2><p>Ezicommerce describes itself as a group of Sales Managers dealing in e-commerce related solutions and business setup. Its service offering spans website development, search visibility, creative design, social platforms, video marketing and Google Business Profile management.</p><p>Instead of treating every channel as a separate task, the goal is to make your website, content, search presence and social activity work together as a business-development system.</p><div class="checks"><div><span>✓</span>Professional digital presence</div><div><span>✓</span>Search-focused visibility</div><div><span>✓</span>Social audience growth</div><div><span>✓</span>Business setup support</div></div></div>
+</div></section>
+
+<section class="section services" id="services"><div class="container"><div class="head"><span class="kicker">Core services</span><h2>Services built around <span class="orange">business outcomes.</span></h2><p>Ezicommerce's published offering includes the following services and management packages.</p></div>
+<div class="grid3">
+<article class="service"><div class="ico"><svg><use href="#web"/></svg></div><h3>Web Design & Development</h3><p>Professional, mobile-responsive websites with core pages, hosting, domain, SSL, support and package-based SEO options. Online shop and custom pages are available in higher packages.</p><span class="price">Published package: PKR 65,000 – 75,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#search"/></svg></div><h3>SEO Service Management</h3><p>Search Engine Optimization designed to improve website visibility and organic search traffic, with on-page, off-page, technical and local SEO options.</p><span class="price">Published package: PKR 65,000 – 75,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#design"/></svg></div><h3>Graphic Designing</h3><p>Visual communication, page layout and brand-focused creative work designed to improve visibility, communicate ideas and support business sales.</p><span class="price">Published package: PKR 35,000 – 45,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#social"/></svg></div><h3>TikTok Marketing</h3><p>Social video marketing services covering audience growth, views, comments, live-stream activity and advertising campaigns.</p><span class="price">Published package: PKR 35,000 – 45,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#social"/></svg></div><h3>Twitter / X Marketing</h3><p>Strategy and account activity focused on content distribution, audience growth, engagement, brand recognition, leads and conversions.</p><span class="price">Published package: PKR 35,000 – 45,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#social"/></svg></div><h3>YouTube Marketing</h3><p>Video-channel marketing combining content distribution, audience growth, targeted views, engagement, watch time and advertising.</p><span class="price">Published package: PKR 40,000 – 45,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#map"/></svg></div><h3>Google Business Profile</h3><p>Local profile management including optimization, images and videos, Q&A, review responses, spam monitoring, competitor tracking and monthly reporting.</p><span class="price">Published package: PKR 35,000 – 45,000</span></article>
+<article class="service"><div class="ico"><svg><use href="#social"/></svg></div><h3>LinkedIn Management</h3><p>Professional social presence and business-focused management designed to support visibility, networking and digital growth.</p><span class="price">Contact us for current package</span></article>
+<article class="service"><div class="ico"><svg><use href="#cart"/></svg></div><h3>E-commerce & Business Setup</h3><p>Business setup and e-commerce-related solutions from a sales-management team, tailored around your products, company and growth requirements.</p><span class="price">Custom quote based on scope</span></article>
+</div></div></section>
+
+<section class="section plans" id="plans"><div class="container"><div class="head"><span class="kicker">Choose your starting point</span><h2>Plans that match your <span class="orange">next move.</span></h2><p>Use the published service pricing as a starting point. For the right combination of services, request a tailored quote.</p></div>
+<div class="grid3">
+<article class="plan"><h3>Web Launch</h3><div class="amount">65K <small>PKR+</small></div><p>Professional website foundation for your business.</p><ul><li>Core business pages</li><li>Mobile responsive design</li><li>Domain & premium hosting options</li><li>SSL & support</li><li>SEO options available</li></ul><a href="#contact" class="btn outline">Choose Web Launch</a></article>
+<article class="plan featured"><span class="badge">Popular</span><h3>SEO Growth</h3><div class="amount">65K <small>PKR+</small></div><p>Visibility-focused optimization for organic search growth.</p><ul><li>On-page SEO</li><li>Off-page SEO</li><li>Technical SEO</li><li>Local SEO</li><li>Reporting & optimization</li></ul><a href="#contact" class="btn primary">Choose SEO Growth</a></article>
+<article class="plan"><h3>Social Growth</h3><div class="amount">35K <small>PKR+</small></div><p>Build audience activity across selected social channels.</p><ul><li>Platform-focused management</li><li>Audience growth activity</li><li>Engagement support</li><li>Campaign options</li><li>Channel-specific strategy</li></ul><a href="#contact" class="btn outline">Choose Social Growth</a></article>
+</div></div></section>
+
+<section class="section process" id="process"><div class="container"><div class="head"><span class="kicker">How it works</span><h2>From business idea to <span class="orange">online growth.</span></h2></div><div class="processgrid">
+<div class="step"><b>01</b><h3>Understand</h3><p>We identify your business, products, audience and digital requirements.</p></div>
+<div class="step"><b>02</b><h3>Plan</h3><p>We select the right website, SEO, creative and social services for your objectives.</p></div>
+<div class="step"><b>03</b><h3>Execute</h3><p>Our team handles the agreed digital and marketing work with a practical focus.</p></div>
+<div class="step"><b>04</b><h3>Grow</h3><p>Use ongoing management and optimization to improve visibility and customer acquisition.</p></div>
+</div></div></section>
+
+<section class="section cta"><div class="container ctain"><div><h2>Not sure which service you need?</h2><p>Tell us what you're trying to build, launch or grow. We'll help map it to the right service.</p></div><a class="btn" href="#contact">Talk to Ezicommerce →</a></div></section>
+
+<section class="section contact" id="contact"><div class="container contactgrid">
+<div><span class="kicker">Start a conversation</span><h2>Tell us what you want to <span class="orange">achieve.</span></h2><p style="margin-top:15px">Request a quote for web development, SEO, graphic design, social media, Google Business Profile management, e-commerce or business setup.</p><div class="contactitems">
+<div class="contactitem"><div class="ico"><svg><use href="#cart"/></svg></div><div><strong>E-commerce & Business Solutions</strong><span>Setup • Development • Growth</span></div></div>
+<div class="contactitem"><div class="ico"><svg><use href="#web"/></svg></div><div><strong>Web & Creative</strong><span>Web Design • Development • Graphic Design</span></div></div>
+<div class="contactitem"><div class="ico"><svg><use href="#search"/></svg></div><div><strong>Digital Visibility</strong><span>SEO • Google Business • Social Marketing</span></div></div>
+</div></div>
+<div class="form"><h3>Request a Quote</h3><p>Complete the form and we'll receive your project requirements.</p><form onsubmit="sendInquiry(event)"><div class="fields">
+<div><label>Name *</label><input id="name" required placeholder="Your name"></div><div><label>Phone / WhatsApp *</label><input id="phone" required placeholder="03xx-xxxxxxx"></div>
+<div><label>Business Name</label><input id="business" placeholder="Company / store"></div><div><label>Service *</label><select id="service" required><option value="">Select a service</option><option>Web Design & Development</option><option>SEO Service Management</option><option>Graphic Designing</option><option>TikTok Marketing</option><option>Twitter / X Marketing</option><option>YouTube Marketing</option><option>Google Business Profile Management</option><option>LinkedIn Management</option><option>E-commerce / Business Setup</option><option>Multiple Services / Custom Plan</option></select></div>
+<div class="full"><label>Project Details *</label><textarea id="details" required placeholder="Tell us what you need, your goals, timeline and requirements."></textarea></div>
+</div><button type="submit">Submit Inquiry →</button><div class="note">This demo form opens your email client with the inquiry prepared for Ezicommerce.</div></form></div>
+</div></section>
+</main>
+
+<footer><div class="container footer"><div class="logo">EZI<span>COMMERCE</span><small>E-COMMERCE MANAGEMENT SERVICES</small></div><p>© <span id="year"></span> Ezicommerce. E-commerce Solutions • Business Setup • Development • Marketing</p><p>Website concept by <a href="https://tonywebstudio.com" target="_blank" rel="noopener">Tony Web Studio</a></p></div></footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+function sendInquiry(e){
+e.preventDefault();
+let n=document.getElementById("name").value.trim(),p=document.getElementById("phone").value.trim(),b=document.getElementById("business").value.trim(),s=document.getElementById("service").value,d=document.getElementById("details").value.trim();
+let subject=encodeURIComponent("Ezicommerce Inquiry — "+s);
+let body=encodeURIComponent("Hello Ezicommerce,\n\nI would like to request a quote.\n\nName: "+n+"\nPhone/WhatsApp: "+p+"\nBusiness: "+(b||"Not provided")+"\nService: "+s+"\n\nProject Details:\n"+d);
+location.href="mailto:?subject="+subject+"&body="+body;
+}
+</script>
+</body>
+</html>
