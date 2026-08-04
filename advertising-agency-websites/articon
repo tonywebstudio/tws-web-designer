@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Articon Advertising Agency - Leading Digital Marketing & Printing Services in Rawalpindi Islamabad. Panaflex Printing, Social Media Marketing, Event Management & More.">
+    <title>Articon Advertising Agency | Digital Marketing & Printing Services Rawalpindi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            /* Pakistani Business Color Psychology - Green (trust, growth), Orange (energy, creativity) */
+            --primary-color: #00A859;
+            --secondary-color: #FF6B35;
+            --accent-color: #FFB800;
+            --dark-color: #1A1A1A;
+            --light-color: #F8F9FA;
+            --white: #FFFFFF;
+            --gray: #6C757D;
+            --gradient: linear-gradient(135deg, #00A859 0%, #007A41 100%);
+            --gradient-secondary: linear-gradient(135deg, #FF6B35 0%, #E85A2B 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Header & Navigation */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            padding: 140px 5% 100px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .stars {
+            color: var(--accent-color);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+        
+        /* Quick Contact Pills */
+        .quick-contact {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .pill-btn {
+            background: rgba(255,255,255,0.15);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .pill-btn:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--light-color);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .info-item i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+        
+        .info-item-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--dark-color);
+        }
+        
+        .info-item-content p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin: 0;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(0,168,89,0.2);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--light-color);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            color: var(--primary-color);
+            opacity: 0.1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            color: var(--dark-color);
+        }
+        
+        .author-stars {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--dark-color);
+        }
+        
+        .contact-details p,
+        .contact-details a {
+            color: var(--gray);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,168,89,0.3);
+        }
+        
+        .social-link.facebook {
+            background: #1877F2;
+        }
+        
+        .social-link.instagram {
+            background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0,168,89,0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,168,89,0.3);
+        }
+        
+        /* Map Section */
+        .map-container {
+            margin-top: 4rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 3rem 5% 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-logo i {
+            color: var(--secondary-color);
+        }
+        
+        .footer-about p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-hours p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-hours .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .footer-bottom a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1rem;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-content,
+            .contact-container,
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 120px 5% 60px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 50px 5%;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+            
+            .quick-contact {
+                flex-direction: column;
+            }
+            
+            .pill-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <i class="fas fa-bullhorn"></i>
+                <span>ARTICON</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Articon Advertising Agency</h1>
+            <p class="hero-subtitle">Your Trusted Partner for Digital Marketing & Professional Printing Services in Rawalpindi & Islamabad</p>
+            
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span><strong>4.5</strong> Google Reviews</span>
+            </div>
+            
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">Specializing in high-quality panaflex printing, vibrant hoardings, digital marketing, event management, and custom branding solutions.</p>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Get A Quote
+                </a>
+                <a href="tel:03165888955" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+            
+            <div class="quick-contact">
+                <a href="https://wa.me/923165888955" class="pill-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://maps.app.goo.gl/psfbDtMFNZUETKC4A" class="pill-btn" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Get Directions
+                </a>
+                <a href="mailto:info@articonadvertisingagency.com" class="pill-btn">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section-header">
+            <h2 class="section-title">About Articon</h2>
+            <p class="section-subtitle">Leading Advertising & Printing Solutions Provider Since Years</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-image">
+                <svg width="100%" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00A859;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#007A41;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="600" height="400" fill="url(#grad1)"/>
+                    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="48" font-weight="bold" font-family="Poppins, sans-serif">ARTICON</text>
+                    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20" font-family="Inter, sans-serif">Advertising Agency</text>
+                    <circle cx="100" cy="100" r="30" fill="rgba(255,255,255,0.2)"/>
+                    <circle cx="500" cy="320" r="40" fill="rgba(255,255,255,0.2)"/>
+                    <path d="M 50 350 L 150 250 L 250 300 L 350 200 L 450 280 L 550 220" stroke="white" stroke-width="3" fill="none" opacity="0.3"/>
+                </svg>
+            </div>
+            
+            <div class="about-text">
+                <h3>Professional Printing & Marketing Excellence</h3>
+                <p>Articon Advertising Agency is your trusted partner for comprehensive digital marketing and printing services in Rawalpindi and Islamabad. We specialize in high-quality panaflex banners, vibrant hoardings, durable backlits, and custom shop signage that deliver impactful advertising solutions.</p>
+                
+                <p>Using advanced printing technology and weather-resistant materials, our prints are sharp, colorful, and designed to withstand Pakistan's climate. From design support to fast delivery, Articon ensures comprehensive services at competitive prices.</p>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="info-item-content">
+                            <h4>24/7 Available</h4>
+                            <p>Round-the-clock service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-award"></i>
+                        <div class="info-item-content">
+                            <h4>Quality Assured</h4>
+                            <p>Premium materials & printing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <div class="info-item-content">
+                            <h4>Fast Delivery</h4>
+                            <p>Quick turnaround time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <div class="info-item-content">
+                            <h4>Best Prices</h4>
+                            <p>Competitive rates guaranteed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive Printing & Digital Marketing Solutions</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-print"></i>
+                </div>
+                <h3>Panaflex Printing</h3>
+                <p>High-quality panaflex banners, hoardings, and backlits with vibrant colors and weather-resistant materials.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shirt"></i>
+                </div>
+                <h3>T-Shirt & Mug Printing</h3>
+                <p>Custom t-shirt, polo shirt, cushion, and mug printing using advanced sublimation and DTF printing technology.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h3>Food Packaging</h3>
+                <p>Pizza boxes, burger boxes, bakery boxes, fries packing, and all types of fast food packaging solutions.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>Social Media Marketing</h3>
+                <p>Professional social media campaigns, post designing, and digital marketing strategies to grow your business.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Event Management</h3>
+                <p>Complete event management, expo branding, expo consultancy, event photoshoots, and product photography.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <h3>Business Stationery</h3>
+                <p>Visiting cards, letterheads, envelopes, certificates, business profiles, and complete stationery printing.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Wedding Cards</h3>
+                <p>Elegant and custom shadi card printing with various designs and premium quality paper options.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>LED Boards & Signage</h3>
+                <p>Professional LED board installation, shop signage, and outdoor advertising solutions in Rawalpindi.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>Expert graphic designers for flyer design, post designing, product branding, and video editing services.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-roller"></i>
+                </div>
+                <h3>Wallpapers</h3>
+                <p>Premium home wallpaper installation and custom wallpaper printing for residential and commercial spaces.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Color Print Services</h3>
+                <p>High-quality color printing, flyer printing, and promotional material printing at affordable rates.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>Gift Items</h3>
+                <p>Custom gift shop items, personalized gifts, printed cushions, and unique promotional products.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="section-header">
+            <h2 class="section-title">Client Testimonials</h2>
+            <p class="section-subtitle">What Our Valued Clients Say About Us</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">"Excellent service! The panaflex printing quality was outstanding. The colors were vibrant and the material was very durable. Highly recommend Articon for all advertising needs in Rawalpindi."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MA</div>
+                    <div class="author-info">
+                        <h4>Muhammad Ali</h4>
+                        <div class="author-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">"Best printing services in town! Got my business cards and letterheads printed here. The quality is superb and prices are very reasonable. The staff is also very cooperative and professional."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SF</div>
+                    <div class="author-info">
+                        <h4>Sara Fatima</h4>
+                        <div class="author-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">"Amazing work on our event management and expo branding! Articon handled everything professionally from design to execution. Their social media marketing services also helped boost our online presence significantly."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AK</div>
+                    <div class="author-info">
+                        <h4>Ahmed Khan</h4>
+                        <div class="author-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We're Here To Help - Contact Us Today For A Free Quote!</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Our Location</h4>
+                        <p>Office S-10, 2nd Floor</p>
+                        <p>Malikabad Shopping Mall, Murree Road</p>
+                        <p>D Block, Satellite Town, Rawalpindi 46300</p>
+                        <a href="https://maps.app.goo.gl/psfbDtMFNZUETKC4A" target="_blank">Get Directions →</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone Numbers</h4>
+                        <a href="tel:03165888955">0316-5888955</a>
+                        <a href="tel:03045286608">0304-5286608</a>
+                        <a href="tel:03345559838">0334-5559838</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Address</h4>
+                        <a href="mailto:info@articonadvertisingagency.com">info@articonadvertisingagency.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Working Hours</h4>
+                        <p style="color: var(--primary-color); font-weight: 600;">Open 24 Hours</p>
+                        <p>7 Days a Week</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/articonadvertisingagency" target="_blank" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/articonnexsolutions/" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/923165888955" target="_blank" class="social-link" style="background: #25D366;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="03XX-XXXXXXX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="panaflex">Panaflex Printing</option>
+                            <option value="tshirt">T-Shirt & Mug Printing</option>
+                            <option value="packaging">Food Packaging</option>
+                            <option value="social-media">Social Media Marketing</option>
+                            <option value="event">Event Management</option>
+                            <option value="stationery">Business Stationery</option>
+                            <option value="wedding">Wedding Cards</option>
+                            <option value="led">LED Boards & Signage</option>
+                            <option value="design">Graphic Design</option>
+                            <option value="wallpaper">Wallpapers</option>
+                            <option value="other">Other Services</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.4644444!2d73.0833!3d33.6167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM3JzAwLjEiTiA3M8KwMDUnMDAuMCJF!5e0!3m2!1sen!2s!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>ARTICON</span>
+                </div>
+                <p>Leading advertising and printing services provider in Rawalpindi & Islamabad. We deliver high-quality printing solutions, digital marketing, and event management services with professional excellence.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/articonadvertisingagency" target="_blank" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/articonnexsolutions/" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/923165888955" target="_blank" class="social-link" style="background: #25D366;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-services">
+                <h4>Popular Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Panaflex Printing</a></li>
+                    <li><a href="#services">T-Shirt Printing</a></li>
+                    <li><a href="#services">Social Media Marketing</a></li>
+                    <li><a href="#services">Event Management</a></li>
+                    <li><a href="#services">LED Boards</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-hours">
+                <h4>Business Hours</h4>
+                <p><strong class="highlight">Open 24 Hours</strong></p>
+                <p>Monday - Sunday</p>
+                <p style="margin-top: 1rem;"><strong>Location:</strong></p>
+                <p>Malikabad Shopping Mall</p>
+                <p>Satellite Town, Rawalpindi</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Articon Advertising Agency. All Rights Reserved.</p>
+            <p style="margin-top: 0.5rem;">Demo website built by <a href="#" target="_blank">Tony Web Studio</a></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll to Top Button
+        const scrollTop = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
+        
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Submission
+        const inquiryForm = document.getElementById('inquiryForm');
+        
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(inquiryForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+            const message = formData.get('message');
+            
+            // Create WhatsApp message
+            const whatsappMessage = `*New Inquiry from Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Message:* ${message}`;
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/923165888955?text=${whatsappMessage}`, '_blank');
+            
+            // Reset form
+            inquiryForm.reset();
+            
+            // Show success message
+            alert('Thank you for your inquiry! We will contact you soon.');
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.offsetTop;
+                    const offsetPosition = elementPosition - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .testimonial-card, .about-text, .about-image').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
